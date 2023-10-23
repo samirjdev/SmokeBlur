@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "TorchBlur",
+    "version": "0.1.0",
+    "description": "TorchBlur uses AI technology to detect personally identifiable information when visiting websites and hide them by visually blurring them.",
+    "permissions": ["activeTab"],
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["js/contentScript.js"]
+        }
+    ],    
+    "action": {
+        "default_popup": "popup/popup.html",
+        "default_icon": {
+            "16": "images/icon16.png",
+            "48": "images/icon48.png",
+            "128": "images/icon128.png"
+        }
+    }
+    
+}
